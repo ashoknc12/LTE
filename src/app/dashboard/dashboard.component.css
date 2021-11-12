@@ -1,0 +1,8 @@
+@import "../home/home.component.css";
+.col {
+    height: 120px;
+}
+.row {
+    margin-top: 20px;
+    margin-left: 20px;
+}

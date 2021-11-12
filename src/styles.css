@@ -21,5 +21,28 @@ body {
 }
 .mat-toolbar-row.justify-content-between {
     width: 98%;
+    height: 100px;
 
 }
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.7)
+}
+.modal-backdrop {
+    z-index: 0 !important;
+}
+.modal {
+    position: fixed;
+    left: 130px;
+}
+
+/* ::ng-deep .modal-backdrop {
+    position: inherit !important;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+} */

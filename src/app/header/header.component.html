@@ -1,18 +1,13 @@
-<mat-toolbar>
+<!-- <mat-toolbar>
   <mat-toolbar-row class="justify-content-between">
     <button mat-icon-button (click)="toggleSidebar()">
-      <!-- <mat-icon>menu</mat-icon> -->
+
     </button>
     <div class="row mr-2 ml-auto">
       <ul class="row m-0 align-items-center">
         <li>
           <button mat-button [matMenuTriggerFor]="menu" class="user mt-2 d-flex align-items-center">Name
             <img src="./assets/Avatar-33@2x.png" alt="" class="user-image mr-1 p-2" />
-
-
-            <!-- <mat-icon class="user-image-icon ml-1"
-              >keyboard_arrow_down</mat-icon
-            > -->
           </button>
           <mat-menu #menu="matMenu">
             <button mat-menu-item>
@@ -23,5 +18,27 @@
         </li>
       </ul>
     </div>
+  </mat-toolbar-row>
+</mat-toolbar> -->
+
+
+<!-- ///////////////////////////////// -->
+
+<mat-toolbar>
+  <mat-toolbar-row class="justify-content-between">
+    <div>
+    </div>
+    <div class="row mr-2 ml-auto">
+      <div class="aliq">
+        <div class="name">
+          <h3>Name</h3>
+          <p style="font-size: 15px;">TYC05511</p>
+        </div>
+        <div>
+          <img src="./assets/Avatar-33@2x.png" alt="" class="user-image p-1" />
+        </div>
+      </div>
+    </div>
+
   </mat-toolbar-row>
 </mat-toolbar>

@@ -1,8 +1,278 @@
-<div class="container-fluid page">
-  <div class="d-flex page__box p-3 mt-2">Leave Summary</div>
-  <div class="page__content shadow p-3 position-relative">
-    <div class="page__content-data position-absolute text-center">
-      Leaves Content Goes Here
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="d-flex page__box col-md-11 mt-2">
+      <b>Leave Summary</b>
+    </div>
+    <div class="col-md-1">
+      <!-- <button type="button" class="btn btn-color" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
+      <button type="button" class="btn newbtn" data-toggle="modal" data-target="#exampleModal"
+        data-whatever="@getbootstrap">Create Batch</button>
+
+
     </div>
   </div>
-</div>
+
+
+  <div class="page__content mx-3 text-center">
+    <table class="table table-borderless">
+      <thead class="head">
+        <tr>
+          <th scope="col">SlNo</th>
+          <th scope="col">Leave Type</th>
+          <th scope="col">Op-Bal</th>
+          <th scope="col">Availed</th>
+          <th scope="col">Lapsed</th>
+          <th scope="col">Encashed</th>
+          <th scope="col">Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>LOP</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+          <td>00</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>EL</td>
+          <td>12</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>CL</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+          <td>00</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>OOD</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+          <td>00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Apply Leave</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div> -->
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog .modal-lg  modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLabel">Batch Creation</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-8 offset-2">
+              <form>
+                <div class="form-group">
+                  <mat-form-field appearance="standard">
+                    <mat-label>Technology Type</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let food of foods" [value]="food.value">
+                        {{food.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="form-group">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Enter a date range</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                      <input matStartDate placeholder="Start date">
+                      <input matEndDate placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                  </mat-form-field>
+                </div>
+                <div class="form-group">
+                  <mat-form-field appearance="standard">
+                    <mat-label>Technology</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let technology of technologys" [value]="technology.value">
+                        {{technology.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn newbtn">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- extraaaaaaaa-------------------------- -->
+
+
+
+  <!-- <form>
+    <div class="form-group">
+      <mat-button-toggle-group name="credit_debit" style="width: 100%;" #group="matButtonToggleGroup"
+        formControlName="credit_debit">
+        <mat-button-toggle style="width: 50%;" value="debit" class="heading">
+          Apply Leave
+        </mat-button-toggle>
+        <mat-button-toggle style="width: 50%;" value="credit" class="heading">
+          Claim Comp Off
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <div class="card-body">
+      <div *ngIf="type.value==='debit'">
+        <mat-form-field>
+          <mat-label> Type</mat-label>
+          <mat-select required name="type" formControlName="type"> -->
+  <!-- <mat-option *ngFor="let leaveType of leaveService.leaveTypes" value="{{leaveType.typeId}}">
+              {{leaveType.type}}
+            </mat-option> -->
+  <!-- </mat-select>
+        </mat-form-field>
+        <div>
+          <mat-radio-group formControlName="leaveFor" name="leaveFor">
+            <mat-radio-button value="Full Day">
+              Full Day
+            </mat-radio-button>
+            <mat-radio-button value="First Half">
+              First Half
+            </mat-radio-button>
+            <mat-radio-button value="Second Half">
+              Second Half
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field>
+              <mat-label> From date</mat-label>
+              <input matInput [min]="minDate" [matDatepicker]="picker" formControlName="fromDate" name="fromDate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+            <mat-form-field>
+              <mat-label>To date</mat-label>
+              <input matInput [min]="minDate" [matDatepicker]="picker1" [disabled]="!leaveForFullDay"
+                formControlName="toDate" name="toDate">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-md-12">
+            <mat-form-field style="margin-top:-10px;">
+              <mat-label>Reason:</mat-label>
+              <textarea matInput rows="3" formControlName="reason" name="reason"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="type.value==='credit'">
+        <div class="mt-2">
+          <mat-radio-group formControlName="leaveFor" name="leaveFor">
+            <mat-radio-button value="Full Day">
+              Full Day
+            </mat-radio-button>
+            <mat-radio-button value="First Half">
+              First Half
+            </mat-radio-button>
+            <mat-radio-button value="Second Half">
+              Second Half
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field>
+              <mat-label> From date</mat-label>
+              <input matInput [max]="maxDate" [matDatepicker]="picker2" formControlName="fromDate" name="fromDate">
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+            <mat-form-field>
+              <mat-label>To date</mat-label>
+              <input matInput [max]="maxDate" [matDatepicker]="picker3" [disabled]="!leaveForFullDay"
+                formControlName="toDate" name="toDate">
+              <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+              <mat-datepicker #picker3></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-md-12">
+            <mat-form-field>
+              <mat-label>Reason:</mat-label>
+              <textarea matInput rows="3" formControlName="reason" name="reason"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="text-right">
+        <button class="custom-btn btn" type="submit">
+          Apply
+        </button>
+      </div>
+    </div>
+  </form> -->
