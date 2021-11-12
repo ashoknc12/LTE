@@ -1,0 +1,86 @@
+.table td,
+.table th {
+    padding: 0.25rem;
+    vertical-align: top;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 90px;
+    margin-left: -15px;
+}
+.btn {
+    display: flex;
+    font-size: 10px;
+    margin-top: 12px;
+    width: 120px;
+    height: 30px;
+}
+.btn-color {
+    background-color: #086288;
+    color: white;
+
+    text-align: center;
+}
+::ng-deep .modal-backdrop.show {
+    opacity: 0;
+}
+
+.page__box {
+    min-height: 10px;
+    font-size: 20px;
+    padding-left: 32px;
+}
+.page__content {
+    min-height: calc(80vh - 178px);
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    background: white;
+    color: black;
+}
+.head {
+    background-color: #D6EFFA;
+}
+.page-data {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ::ng-deep .modal-backdrop {
+    position: inherit !important;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+} */
+::ng-deep .mat-drawer.mat-drawer-side {
+    z-index: 0;
+}
+
+::ng-deep .modal-backdrop {
+    z-index: 0 !important;
+}
+
+/* //////////// */
+
+.newbtn {
+    background-color: #086288;
+    color: white;
+}
+
+.subbtn {
+    color: #086288;
+}
+
+
+.modal-body mat-form-field {
+    width: 350px;
+}
+
+.example-form-field {
+    margin-right: 20px;
+}

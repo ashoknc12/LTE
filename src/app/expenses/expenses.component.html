@@ -1,8 +1,85 @@
-<div class="container-fluid page">
+<!-- <div class="container-fluid page">
   <p class="d-flex page__box p-3 mt-2">Expenses</p>
-  <div class="page__content shadow p-3 position-relative">
-    <div class="page__content-data position-absolute text-center">
+  <div class="page__content shadow p-3 ">
+    <div class="page__content-data text-center">
       Expenses Content Goes Here
     </div>
   </div>
-</div>
+</div> -->
+
+<!-- ///////////////////////////// -->
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="d-flex page__box col-md-11 mt-2">
+      <b> Timesheet History</b>
+    </div>
+    <div class="col-md-1">
+      <!-- <button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Apply Leave</button> -->
+      <button type="button" class="btn btn-color" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        +NewExpenses
+      </button>
+    </div>
+  </div>
+
+  <!-- ////card from here -->
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="col mb-4">
+      <div class="card">
+
+        <div class="card-body">
+          <h6 class="card-title"><b>Aug 25,2020</b></h6>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col mb-4">
+      <div class="card">
+
+        <div class="card-body">
+          <h6 class="card-title"><b>Aug 25,2020</b></h6>
+          <p class="card-text"><b>Expense Date:Aug 25,2020</b></p>
+          <p class="card-text">Expense Details :Aug 25,2020</p>
+          <p class="card-text">Total Amount :22,000</p>
+          <p class="card-text">Status :<span style="color: rgb(233, 178, 76);">Pending</span></p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ends here------------ -->
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Apply Leave</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <textarea class="form-control" id="message-text"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

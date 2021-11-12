@@ -1,0 +1,14 @@
+@import "../home/home.component.css";
+.col {
+    height: 150px;
+
+}
+.row {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.card-body {
+    font-size: 10px;
+    font-weight: bold;
+
+}
